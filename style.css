@@ -1,0 +1,104 @@
+.grid-contenedor {
+  background: darkorange;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-rows: 50px 30px auto auto 50px;
+      grid-template-rows: 50px 30px auto auto 50px;
+  -ms-grid-columns: ()[auto];
+      grid-template-columns: repeat(auto);
+      grid-template-areas: "header header header" "menu menu menu" "section section section" "banner banner banner" "footer footer footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+  background-color: darkorchid;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: menu;
+  background-color: blueviolet;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+nav a li {
+  display: inline-block;
+  width: 10%;
+  padding: 5px 10px;
+  background-color: #f03ad1;
+  border: 1px solid #000;
+  text-align: center;
+  color: #fff;
+}
+
+section {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: section;
+  background-color: gold;
+  text-align: start;
+  position: start;
+  padding: 10px;
+  font-size: larger;
+  display: -ms-grid;
+  display: grid;
+  font-family: 'Crimson Pro', serif;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 50px;
+  padding: 10px;
+  display: inline-block;
+}
+
+aside {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: banner;
+}
+
+aside__aside {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: banner;
+  background-color: mediumblue;
+  display: -ms-grid;
+  display: grid;
+}
+
+aside__aside__imagen {
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background-color: indianred;
+}
+/*# sourceMappingURL=style.css.map */
