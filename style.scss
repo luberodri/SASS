@@ -1,103 +1,49 @@
 
-.grid-contenedor {
-    background: darkorange;
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 50px 30px auto auto 50px;
-    grid-template-columns: repeat(auto);
-    grid-template-areas: 
-    "header header header"
-    "menu menu menu"
-    "section section section"
-    "banner banner banner"
-    "footer footer footer";
-
-    
-}
+@import"vars"
 
 
-
-
-header {
-    grid-area: header;
-    display: grid;
+.header {
     background-color: darkorchid;
-}
-
-nav {
-    grid-area: menu;
-    background-color: blueviolet;
-    a { 
-        text-decoration:none;
-        color:inherit;
-        font-size:14px;
-        li {
-            display:inline-block;
-            width:10%;
-            padding:5px 10px;
-            background-color:rgb(240, 58, 209);
-            border:1px solid #000;
-            text-align:center;
-            color:#fff;
-
+    & &__menu {
+        display: inline;
+        
+        ul{
+            li{
+                a{
+                    color:$colorpricipal;
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
         }
     }
 }
 
-section {
-    grid-area:section;
-    background-color: gold;
-    text-align:start;
-    position:start;
-    padding: 10px;
-    font-size: larger;
-    display: grid;
-    font-family: 'Crimson Pro', serif;
-
-    h1 { 
-        text-align:center;
-        font-size: 50px;
-        padding: 10px;
-        display: inline-block;
-
+.info{
+        background-color: gold;
+        
+        h1 {
+            font:{
+                family:sans-serif;
+                weight: 700;
+            }
+        }
     }
 }
 
-aside {
-    grid-area: banner;
-    background-color: mediumblue;
-    display: grid;
-    
-    & &.imagen {
-        width: 500px;
-        position: absolute;
-        left:50%;
-        margin-left: -250px;
-    } 
-}
+.foto {
 
    
+    background-color: mediumblue;
+    display: grid;
 
-footer {
-    grid-area: footer;
-    background-color: indianred;
-    
-}
+    & &__imagen {
+        position: center;
+        place-items: center;
+        padding: 10px;
+        margin: 10px;
+        height: auto;
 
-     
-
-@media (max-width:786px)
-{
-    #grid-contenedor {
-        display: grid;
-        height: 100vh;
-        background-color: seashell;
-        grid-template-rows: 10x 10px 10px auto 20px;
-        grid-template-areas:
-        "header header header" 
-        "menu menu menu"
-        "banner banner banner"
-        "section section section"
-        "section section section"
-        "footer footer footer";
+    }
 }

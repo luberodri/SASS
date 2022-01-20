@@ -3,17 +3,9 @@
   display: -ms-grid;
   display: grid;
   height: 100vh;
-  -ms-grid-rows: 50px 30px auto auto 50px;
-      grid-template-rows: 50px 30px auto auto 50px;
-  -ms-grid-columns: ()[auto];
-      grid-template-columns: repeat(auto);
-      grid-template-areas: "header header header" "menu menu menu" "section section section" "banner banner banner" "footer footer footer";
 }
 
 header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: header;
   display: -ms-grid;
   display: grid;
@@ -21,9 +13,6 @@ header {
 }
 
 nav {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: menu;
   background-color: blueviolet;
 }
@@ -45,9 +34,6 @@ nav a li {
 }
 
 section {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: section;
   background-color: gold;
   text-align: start;
@@ -67,24 +53,16 @@ section h1 {
 }
 
 aside {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: banner;
-}
-
-aside__aside {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: banner;
   background-color: mediumblue;
   display: -ms-grid;
   display: grid;
 }
 
-aside__aside__imagen {
-  position: absolute;
+aside aside-imagen {
+  background-color: aquamarine;
+  border: 10px;
+  place-items: center;
   padding: 10px;
   margin: 10px;
   height: auto;
@@ -95,9 +73,6 @@ aside__aside__imagen {
 }
 
 footer {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: footer;
   background-color: indianred;
 }
