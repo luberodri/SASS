@@ -19,12 +19,14 @@
     }
 }
 
-.info{
+.info {
         background-color: gold;
         
-        h1 {
-            font: {
-                family:sans-serif;
+        & &__titulo {
+
+            font:{
+                
+                family: sans-serif;
                 weight: 700;
             }
         }
