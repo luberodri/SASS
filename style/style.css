@@ -1,9 +1,4 @@
-.grid-contenedor {
-    background: darkorange;
-    display: -ms-grid;
-    display: grid;
-    height: 100vh;
-  }
+
   
   header {
     grid-area: header;
