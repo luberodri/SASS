@@ -1,5 +1,4 @@
-
-@import"vars"
+@import 'vars';
 
 
 .header {
@@ -24,7 +23,7 @@
         background-color: gold;
         
         h1 {
-            font:{
+            font: {
                 family:sans-serif;
                 weight: 700;
             }
